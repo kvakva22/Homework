@@ -8,8 +8,6 @@ def get_days_from_today(date):
         result = date1 - datetime.today().date()
         return result.days
     except ValueError:
-        date1 = datetime.strptime(date, "%Y.%m.%d").date()
-        result = date1 - datetime.today().date()
-        return result.days
+        print("Ви ввели некоректні дані")
 
 print(get_days_from_today(date_input))
