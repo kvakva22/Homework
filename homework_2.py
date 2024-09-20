@@ -13,8 +13,8 @@ def get_numbers_ticket(min, max, quantity):
         return lotterylist
     
     try:
-        number=random.sample(range(min, max), k=quantity)
-        lotterylist=number
+        lotterylist=random.sample(range(min, max), k=quantity)
+        lotterylist.sort()
     except  ValueError:
         print(f"Неможливо обрати {quantity} значень з діапазону від {min} до {max}")
     return lotterylist
